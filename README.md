@@ -1,2 +1,4 @@
-# lean-stack
-*** LE∆N STACK -- THE PURE JAVASCRIPT STACK -- (Loki Database, Express, Any Application Framework, Node) ***
+# LE∆N STACK
+# THE PURE JAVASCRIPT STACK
+- (Loki Database, Express, An Application Framework, Node)
+- Under Construction (06/25/16)
