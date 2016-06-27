@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #333;
+    color: #9d936d;
+    overflow: visible;
+    -webkit-text-size-adjust: 100%;
+}
+#content-body {
+    min-height: 80%;
+    width: 800px;
+    margin: 20px auto;
+}
+footer {
+    height: 20%;
+}
+section {
+    margin: 30px 0;
+}
+/* ============================================================ */
+
+
+body, div, table, input {
+    font-family: Roboto Mono;
+    font-size: 16px;
+}
+a, button {
+    font-family: Audiowide;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: Audiowide;
+    margin: 5px;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 34px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 12px; }
+
+div {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    padding: 7px 14px;
+    color: #777;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    color: #ccc;
+    transition: 300ms;
+}
+
+input, button {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    vertical-align: top;
+}
+
+button {
+    background: #9d936d;
+    color: #222;
+    cursor: pointer;
+}
+button:hover {
+    background: #ccc;
+    transition: 300ms;
+}
+.intro-button {
+    width: 250px;
+    padding: 15px 10px;
+}
+
+/* ============================================================ */
+
+header, footer {
+    background: #222;
+    color: #777;
+}
+nav {
+    width: 800px;
+    margin: 0 auto;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    padding: 10px 0;
+    list-style: none;
+}
+header nav { text-align: left; }
+footer nav { text-align: center; }
+
+/* ============================================================ */
+
+table.users {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.users tr:nth-child(odd)  { background: rgba(0,0,0,.2); }
+table.users tr:nth-child(even) { background: rgba(0,0,0,.3); }
+table.users tr:hover           { background: rgba(255,255,255,.1); }

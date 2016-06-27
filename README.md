@@ -1,4 +1,5 @@
-# LE∆N STACK
-# THE PURE JAVASCRIPT STACK
-- (Loki Database, Express, An Application Framework, Node)
-- Under Construction (06/25/16)
+![LEAN STACK](web/img/logo-medium.png)
+# Documentation here:
+# [http://lean-stack.io](http://lean-stack.io)
+#
+_Under Construction (06/27/16)_

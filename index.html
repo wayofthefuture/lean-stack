@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="eob2fk8UpEPLc5b6AUGL51Q1nJMKahW94KSJQ1P9ddE"/>
+
+    <title>LEAN</title>
+    <link href='web/css/style.css' rel='stylesheet' type='text/css'>
+    <script src="lib/clipboard.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location='https://github.com/wayofthefuture/lean-stack/fork';">FORK</button>
+            <button onclick="window.location='https://github.com/wayofthefuture/lean-stack';">GITHUB</button>
+        </nav>
+    </header>
+
+    <section id="content-body">
+        <img src="web/img/logo.png" width="500">
+        <h4>(Loki DB, Express, An App Framework, Node)</h4>
+        <br><br>
+
+        <div class="code-header">
+            Usage:<button class="copy" data-clipboard-target="#install" onclick="onCopy(this);">COPY</button>
+        </div>
+        <div id="install" class="code">
+            npm install -g lean-stack<br>
+            lean-stack .<br>
+            npm install && npm start
+        </div>
+        <br>
+
+        <div class="code-header">
+            Options:
+        </div>
+
+<!-- white-space: pre, no indentation-->
+<div class="cli-usage">
+Usage: lean-stack [options] &lt;dir&gt;
+
+Generate a LEAN stack in the specified directory.
+
+Options:
+
+-h, --help            output usage information
+-V, --version         output the version number
+
+-s, --stack  &lt;type&gt;   type of stack [default: handlebars]
+                      types: handlebars,mustache,ejs,aurelia,angular,react
+                      in progress: mustache,ejs,aurelia,angular,react
+
+</div>
+<br>
+
+        <div class="code-header">
+            Select a stack:
+        </div>
+        <div class="tile-wrapper">
+            <div class="tile" onclick="toggle('handlebars');">
+                HANDLEBARS
+            </div><div class="tile" onclick="toggle('mustache');">
+                MUSTACHE
+            </div><div class="tile" onclick="toggle('ejs');">
+                EJS
+            </div>
+            <br>
+            <div class="tile" onclick="toggle('aurelia');">
+                AURELIA
+            </div><div class="tile" onclick="toggle('angular');">
+                ANGULAR
+            </div><div class="tile" onclick="toggle('react');">
+                REACT
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <div id="stack-command-head" class="code-header">
+            <span id="stack-title">Command:</span><button class="copy" data-clipboard-target="#stack-command" onclick="onCopy(this);">COPY</button>
+        </div>
+        <div id="stack-command" class="code">
+            Click a stack above to view the command.
+        </div>
+        <br><br>
+    </section>
+
+    <footer>
+        <nav>
+            <br>LEAN STACK<br>The Pure Javascript Stack<br><br>
+        </nav>
+    </footer>
+
+    <script>
+        var stacks = {
+            handlebars: 'lean-stack -s handlebars .'
+        };
+
+        function toggle(key) {
+            var stackTitle = document.getElementById('stack-title');
+            var stackCommand = document.getElementById('stack-command');
+
+            if (stacks[key]) {
+                stackCommand.innerHTML = stacks[key];
+            }
+            else {
+                stackCommand.innerHTML = 'This stack is under construction.<br>Please fork our repository and contribute on GitHub!<br>https://github.com/wayofthefuture/lean-stack/fork';
+            }
+        }
+
+        function onCopy(e) {
+            e.innerHTML = 'DONE';
+            setTimeout(function() { e.innerHTML = 'COPY' }, 3000);
+        }
+
+        new Clipboard('.copy');
+    </script>
+</body>
+</html>

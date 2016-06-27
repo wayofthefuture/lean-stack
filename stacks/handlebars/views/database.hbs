@@ -1,0 +1,52 @@
+<section>
+    <h3>{{title}}</h3>
+    <h3>{{message}}</h3>
+</section>
+
+<section>
+    <input id="search" type="text" placeholder="Search here...">
+    <button onclick="search();">SEARCH</button>
+    <button onclick="struct();">VIEW LOKI STRUCTURE</button>
+    <br><br>
+
+    <table class="users" cellpadding="10">
+        <tr>
+            <td align="left">NAME</td>
+            <td align="left">CITY</td>
+            <td align="center">STATE</td>
+            <td align="center">ZIP</td>
+        </tr>
+
+        {{#each users}}
+            <tr>
+                <td align="left">{{name}}</td>
+                <td align="left">{{city}}</td>
+                <td align="center">{{state}}</td>
+                <td align="center">{{zip}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</section>
+
+<section>
+    <pre>{{struct}}</pre>
+</section>
+
+<script>
+    function search() {
+        let val = $('#search').val().trim();
+
+        if (val && val.length > 2) {
+            window.location = '/database/find/' + val;
+        }
+        else {
+            alertify.alert('Hey!', 'Please type a minimum of 3 characters into the search field!', null);
+        }
+    }
+
+    function struct() {
+        alertify.alert('Hey!', 'This will show the in-memory structure of the Loki Database Collection. Scroll to the bottom to view collection settings.', function() {
+            window.location = '/database/structure';
+        });
+    }
+</script>
