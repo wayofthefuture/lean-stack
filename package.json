@@ -1,21 +1,26 @@
 {
   "name": "lean-stack",
-  "version": "0.5.0",
-  "description": "The LEAN Stack (Loki DB, Express, An Application Framework, Node)",
+  "version": "0.5.5",
+  "description": "LEAN Stack - The Pure Javascript Stack",
+  "author": "Way Of The Future",
+  "license": "GPL-3.0",
+  "homepage": "http://lean-stack.io",
+  "preferGlobal": true,
   "keywords": [
     "lean-stack",
     "lean",
     "loki",
     "lokijs"
   ],
-  "author": "Way Of The Future",
-  "license": "GPL",
   "bin": {
     "lean-stack": "./bin/lean-stack.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/wayofthefuture/lean-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wayofthefuture/lean-stack/issues"
   },
   "dependencies": {
     "commander": "^2.9.0",
