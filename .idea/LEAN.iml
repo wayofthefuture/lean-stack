@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/stacks/handlebars/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/stacks/handlebars/public/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/stacks/pug/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -2,7 +2,6 @@
 //node v8-options es6 module syntax currently under development (2016/06/25)
 let path         = require('path');
 let express      = require('express');
-let exphbs       = require('express-handlebars');
 let cookieParser = require('cookie-parser');
 let bodyParser   = require('body-parser');
 let loki         = require('lokijs');
@@ -16,10 +15,7 @@ let app      = express();
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-
-//view engine & main template
-app.engine('.hbs', exphbs({ defaultLayout: 'template', extname: '.hbs' }));
-app.set('view engine', '.hbs');
+app.set('view engine', 'pug');
 
 //middleware
 app.use(bodyParser.json());

@@ -6,7 +6,7 @@ var program = require('commander');
 
 var stacktypes = {
     handlebars: 'handlebars',
-    mustache:   'mustache',
+    pug:        'pug',
     ejs:        'ejs',
     aurelia:    'aurelia',
     angular:    'angular',
@@ -19,12 +19,12 @@ program
   .version('1.1.0')
   .usage('[options] <dir>')
   .description('Generate a LEAN stack in the specified directory.')
-  .option('-s, --stack <type>', 'type of stack (handlebars,mustache,ejs,aurelia,angular,react) [default: handlebars]', 'handlebars');
+  .option('-s, --stack <type>', 'type of stack (handlebars,pug(jade),ejs,aurelia,angular,react) [default: handlebars]', 'handlebars');
 
 program.on('--help', function() {
   console.log('  Examples:');
   console.log('     lean-stack .');
-  console.log('     lean-stack -s mustache my-dir');
+  console.log('     lean-stack -s pug my-dir');
 });
 
 program.parse(process.argv);

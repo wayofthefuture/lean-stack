@@ -1,0 +1,42 @@
+extends template
+
+block content
+    section
+        h3 #{title}
+        h3 #{message}
+    section
+        input#search(type='text', placeholder='Search here...')
+        button(onclick='search();') SEARCH
+        button(onclick='struct();') VIEW LOKI STRUCTURE
+        br
+        br
+        table.users(cellpadding='10')
+            tr
+                td(align='left') NAME
+                td(align='left') CITY
+                td(align='center') STATE
+                td(align='center') ZIP
+                each obj in users
+                    tr
+                        td(align='left') #{obj.name}
+                        td(align='left') #{obj.city}
+                        td(align='center') #{obj.state}
+                        td(align='center') #{obj.zip}
+    section
+        pre.
+            #{struct}
+    script.
+        function search() {
+            let val = $('#search').val().trim();
+            if (val && val.length > 2) {
+                window.location = '/database/find/' + val;
+            }
+            else {
+                alertify.alert('Hey!', 'Please type a minimum of 3 characters into the search field!', null);
+            }
+        }
+        function struct() {
+            alertify.alert('Hey!', 'This will show the in-memory structure of the Loki Database Collection. Scroll to the bottom to view collection settings.', function() {
+                window.location = '/database/structure';
+            });
+        }

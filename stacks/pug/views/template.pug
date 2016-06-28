@@ -1,0 +1,33 @@
+doctype html
+
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title #{title}
+        link(rel='stylesheet', href='/public/css/alertify.css')
+        link(rel='stylesheet', href='/public/css/style.css')
+        script(src='/public/lib/jquery-3.0.0.min.js')
+        script(src='/public/lib/alertify.min.js')
+
+    body
+        header
+            nav
+                ul
+                    li
+                        a(href='/') HOME
+                    li
+                        a(href='/about') ABOUT
+                    li
+                        a(href='/database') DATABASE
+        section#content-body
+            block content
+        footer
+            nav
+                ul
+                    li
+                        a(href='https://github.com/wayofthefuture/lean-stack') GITHUB
+                    li
+                        a(href='https://github.com/wayofthefuture/lean-stack/fork') FORK
+                br
+                small Copyright notice here...
+                br
