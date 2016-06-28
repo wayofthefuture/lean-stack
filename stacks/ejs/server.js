@@ -1,12 +1,12 @@
 //to view es6 capabilities see http://node.green/
 //node v8-options es6 module syntax currently under development (2016/06/25)
-let path         = require('path');
-let express      = require('express');
-let expressHbs   = require('express-handlebars');
-let cookieParser = require('cookie-parser');
-let bodyParser   = require('body-parser');
-let loki         = require('lokijs');
-let routes       = require('./routes');
+let path           = require('path');
+let express        = require('express');
+let ejsLayouts     = require('express-ejs-layouts');
+let cookieParser   = require('cookie-parser');
+let bodyParser     = require('body-parser');
+let loki           = require('lokijs');
+let routes         = require('./routes');
 
 
 //setup
@@ -18,8 +18,9 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 
 //view engine & main template
-app.engine('.hbs', expressHbs({ defaultLayout: 'template', extname: '.hbs' }));
-app.set('view engine', '.hbs');
+app.set('view engine', 'ejs');
+app.set('layout', 'template');
+app.use(ejsLayouts);
 
 //middleware
 app.use(bodyParser.json());

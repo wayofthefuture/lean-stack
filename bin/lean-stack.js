@@ -3,6 +3,14 @@ var fs      = require('fs');
 var path    = require('path');
 var shell   = require('shelljs');
 var program = require('commander');
+var semver  = require('semver');
+
+var version = semver.clean(process.version);
+
+if (semver.lt(version, '6.0.0')) {
+    shell.echo('Please upgrade your NodeJS version to at least 6.0.0.');
+    process.exit();
+}
 
 var stacktypes = {
     handlebars: 'handlebars',

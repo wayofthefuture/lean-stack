@@ -1,5 +1,5 @@
 <section>
-    <h3>{{title}}</h3>
+    <h3><%=title%></h3>
 </section>
 
 <section>
@@ -16,19 +16,19 @@
             <td align="center">ZIP</td>
         </tr>
 
-        {{#each users}}
+        <% for (var i = 0; i < users.length; i++) { %>
             <tr>
-                <td align="left">{{name}}</td>
-                <td align="left">{{city}}</td>
-                <td align="center">{{state}}</td>
-                <td align="center">{{zip}}</td>
+                <td align="left"><%= users[i].name %></td>
+                <td align="left"><%= users[i].city %></td>
+                <td align="center"><%= users[i].state %></td>
+                <td align="center"><%= users[i].zip %></td>
             </tr>
-        {{/each}}
+        <% } %>
     </table>
 </section>
 
 <section>
-    <pre>{{struct}}</pre>
+    <pre><%-struct%></pre>
 </section>
 
 <script>

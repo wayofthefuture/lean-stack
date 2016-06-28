@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 
 router.get('/find/:search', (req, res) =>  {
     let search = req.params.search;
-    var regex = '\\/' + search + '\\/i';
 
     let coll = req.database.getCollection('users');
     let users = coll.find({ name: { '$contains': search } });
