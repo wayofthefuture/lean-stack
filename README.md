@@ -1,5 +1,9 @@
 ![LEAN STACK](web/img/logo-medium.png)
-# Documentation here:
+
+# Installation:
+```sh
+$ npm install -g lean-stack
+```
+
+# Documentation:
 # [http://lean-stack.io](http://lean-stack.io)
-#
-_Under Construction (06/27/16)_
