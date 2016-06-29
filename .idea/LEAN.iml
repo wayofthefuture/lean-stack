@@ -11,5 +11,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="express-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="body-parser-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="shelljs-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="semver-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="commander-DefinitelyTyped" level="project" />
   </component>
 </module>
