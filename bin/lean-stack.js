@@ -8,6 +8,7 @@ var semver  = require('semver');
 var version = semver.clean(process.version);
 
 if (semver.lt(version, '6.0.0')) {
+    shell.echo('Our stacks use new JavaScript ES6 Features!');
     shell.echo('Please upgrade your NodeJS version to at least 6.0.0.');
     process.exit();
 }
