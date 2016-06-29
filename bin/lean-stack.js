@@ -4,6 +4,9 @@ var path    = require('path');
 var shell   = require('shelljs');
 var program = require('commander');
 var semver  = require('semver');
+var pkgjson = require('../package.json');
+
+//=========================================================================
 
 var version = semver.clean(process.version);
 
@@ -25,7 +28,7 @@ var stacktypes = {
 //=========================================================================
 
 program
-  .version('1.1.0')
+  .version(semver.clean(pkgjson.version))
   .usage('[options] <dir>')
   .description('Generate a LEAN stack in the specified directory.')
   .option('-s, --stack <type>', 'type of stack (handlebars,pug(jade),ejs,aurelia,angular,react) [default: handlebars]', 'handlebars');
