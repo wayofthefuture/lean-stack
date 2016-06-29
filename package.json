@@ -1,6 +1,6 @@
 {
   "name": "lean-stack",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "LEAN Stack - The Pure JavaScript Stack",
   "author": "Way Of The Future",
   "license": "GPL-3.0",
@@ -21,6 +21,9 @@
   },
   "bugs": {
     "url": "https://github.com/wayofthefuture/lean-stack/issues"
+  },
+  "scripts": {
+    "install-global": "npm i -g release-it"
   },
   "dependencies": {
     "commander": "^2.9.0",
