@@ -20,8 +20,12 @@ footer {
 section {
     margin: 30px 0;
 }
-/* ============================================================ */
+#copyright {
+    margin: 30px 0;
+    font-size: 14px;
+}
 
+/* ============================================================ */
 
 body, div, table, input {
     font-family: Roboto Mono;
