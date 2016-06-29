@@ -3,7 +3,7 @@ let router = require('express').Router();
 
 router.get('/', (req, res) => {
     let coll = req.database.getCollection('users');
-    let users = coll.data;
+    let users = coll.chain().simplesort('name').data();
 
     render(res, users);
 });
@@ -12,7 +12,7 @@ router.get('/find/:search', (req, res) =>  {
     let search = req.params.search;
 
     let coll = req.database.getCollection('users');
-    let users = coll.find({ name: { '$contains': search } });
+    let users = coll.find({ name: { '$regex': new RegExp(search, 'i') } });
 
     render(res, users);
 });
