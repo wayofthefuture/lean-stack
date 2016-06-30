@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="body-parser-DefinitelyTyped" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_body-parser_body-parser.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_body-parser_body-parser.d.ts" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
