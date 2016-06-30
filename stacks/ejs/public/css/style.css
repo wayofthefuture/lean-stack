@@ -14,9 +14,6 @@ html, body {
     width: 800px;
     margin: 20px auto;
 }
-footer {
-    height: 20%;
-}
 section {
     margin: 30px 0;
 }
@@ -25,7 +22,7 @@ section {
     font-size: 14px;
 }
 #subcopy {
-    margin-top: 20px;
+    padding: 5px 0;
     font-size: 10px;
 }
 

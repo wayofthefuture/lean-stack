@@ -6,7 +6,9 @@
     <meta name="google-site-verification" content="eob2fk8UpEPLc5b6AUGL51Q1nJMKahW94KSJQ1P9ddE"/>
     <meta name="msvalidate.01" content="02163706F336AD3273C156DC3A018263"/>
 
-    <title>LEAN Stack - The Pure JavaScript Stack</title>
+    <title>LEAN-STACK - The Pure JavaScript Stack</title>
+    <meta name="description" content="The Pure JavaScript Stack (Loki Database, Express, An Application Framework, Node)">
+
     <link href='web/css/style.css' rel='stylesheet' type='text/css'>
     <script src="web/lib/clipboard.min.js"></script>
 </head>
@@ -36,6 +38,37 @@
         <br>
 
         <div class="code-header">
+            Select a stack:
+        </div>
+        <div class="tile-wrapper">
+            <div class="tile" onclick="toggle('handlebars');">
+                HANDLEBARS
+            </div><div class="tile" onclick="toggle('pug');">
+            PUG (JADE)
+        </div><div class="tile" onclick="toggle('ejs');">
+            EJS
+        </div>
+            <br>
+            <div class="tile" onclick="toggle('aurelia');">
+                AURELIA
+            </div><div class="tile" onclick="toggle('angular');">
+            ANGULAR
+        </div><div class="tile" onclick="toggle('react');">
+            REACT
+        </div>
+            <br>
+        </div>
+        <br>
+
+        <div id="stack-command-head" class="code-header">
+            <span id="stack-title">Command:</span><button class="copy" data-clipboard-target="#stack-command" onclick="onCopy(this);">COPY</button>
+        </div>
+        <div id="stack-command" class="code">
+            Click a stack above to view the command.
+        </div>
+        <br><br>
+
+        <div class="code-header">
             Options:
         </div>
 
@@ -55,39 +88,8 @@ Options:
                       in progress: aurelia,angular,react
 
 </div>
-<br>
-
-        <div class="code-header">
-            Select a stack:
-        </div>
-        <div class="tile-wrapper">
-            <div class="tile" onclick="toggle('handlebars');">
-                HANDLEBARS
-            </div><div class="tile" onclick="toggle('pug');">
-                PUG (JADE)
-            </div><div class="tile" onclick="toggle('ejs');">
-                EJS
-            </div>
-            <br>
-            <div class="tile" onclick="toggle('aurelia');">
-                AURELIA
-            </div><div class="tile" onclick="toggle('angular');">
-                ANGULAR
-            </div><div class="tile" onclick="toggle('react');">
-                REACT
-            </div>
-            <br>
-        </div>
-        <br>
-
-        <div id="stack-command-head" class="code-header">
-            <span id="stack-title">Command:</span><button class="copy" data-clipboard-target="#stack-command" onclick="onCopy(this);">COPY</button>
-        </div>
-        <div id="stack-command" class="code">
-            Click a stack above to view the command.
-        </div>
-        <br><br>
     </section>
+    <br><br>
 
     <footer>
         <nav>
@@ -103,7 +105,6 @@ Options:
         };
 
         function toggle(key) {
-            var stackTitle = document.getElementById('stack-title');
             var stackCommand = document.getElementById('stack-command');
 
             if (stacks[key]) {
