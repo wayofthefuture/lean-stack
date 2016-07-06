@@ -1,8 +1,10 @@
+[![NPM](https://nodei.co/npm/lean-stack.png)](https://nodei.co/npm/lean-stack/)
+
 ![LEAN STACK](web/img/logo-medium.png)
 
 # Installation:
 ```sh
-$ npm install -g lean-stack
+$ npm install lean-stack -g
 ```
 
 # Documentation:
