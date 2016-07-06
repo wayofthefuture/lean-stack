@@ -4,7 +4,7 @@
 
 # Installation:
 ```sh
-$ npm install lean-stack -g
+$ [sudo] npm install lean-stack -g
 ```
 
 # Documentation:
